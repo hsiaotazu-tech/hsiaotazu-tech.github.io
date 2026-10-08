@@ -1,10 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AKDC</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
+
+  <title>AKDC — Coming Soon</title>
+
   <style>
     * {
       margin: 0;
@@ -15,25 +19,48 @@
     html, body {
       width: 100%;
       height: 100%;
-      background: #ffffff;
+      overflow: hidden;
+      background: #efe3d2;
     }
 
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
     }
 
-    img {
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    picture img {
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
+      object-position: center center;
+    }
+
+    /* 手機版 */
+    @media (max-width: 767px) {
+      picture img {
+        object-position: center center;
+      }
     }
   </style>
 </head>
+
 <body>
-  <img src="comingsoon.png" alt="Coming Soon">
+  <picture>
+    <source
+      media="(max-width: 767px)"
+      srcset="comingsoon.png">
+
+    <img
+      src="comingsoon-desktop.png"
+      alt="BOO! Little Projects Coming Soon">
+  </picture>
 </body>
 </html>
